@@ -69,7 +69,7 @@ async def start():
                 step = random.randint(int(_step[0]), int(_step[1]))
         else:
             msg("🥾本次刷步数为20000-30000的随机步数") 
-            step = str(random.randint(20000,30000))
+            step = str(random.randint(18000,30000))
         
         istel = re.match(r"^1[35678]\d{9}$", ck[0])
         await sbs_info(ck[0], ck[1], step, istel)
@@ -344,6 +344,7 @@ def tip():
 
 if __name__ == '__main__':
     global ckArr, step, msg_info, send, count_success_dict
+    ckArr=['2627194525@qq.com&bolong12', '13413618516&lv123456789', '13071653858&Huang123456', '15902017595&hw19911028', '13076778985&HuangWei1325']
     tip()
     asyncio.run(start())
     print(count_success_dict)
